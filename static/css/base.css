@@ -6,8 +6,9 @@ body {
     background: url('/media/home_background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
+    height: 100vh;
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Playfair-display';
 }
 
 /* from Bulma */
@@ -27,7 +28,7 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
+.shop-button {
     background: black;
     color: white;
     min-width: 260px;
