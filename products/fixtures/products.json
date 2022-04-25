@@ -9,7 +9,9 @@
           "price":49.99,
           "category":1,
           "rating":4.9,
-          "image":"lecreuset_blue.jpg"
+          "image":"lecreuset_blue.jpg",
+          "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp"
+          
        }
     },
     {
