@@ -102,3 +102,13 @@ hr {
         padding-top: 164px;
     }
 }
+
+/* Pushing the top section in mobile resolution */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 180px;
+    }
+    body {
+        height: calc(100vh-180px);
+    }
+}
