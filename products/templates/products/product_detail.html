@@ -32,7 +32,9 @@
                     <h3 class="mb-0 font-weight-bold text-left">{{ product.name }}</h3>
                     <h3 class="lead mt-4 mb-4 text-left font-weight-bold">${{ product.price }}</h3>
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i><i class="fas fa-star mr-1"></i>
+                            {{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
