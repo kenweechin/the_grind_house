@@ -17,10 +17,10 @@
                 French Press
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Le Creuset</a>
-                <a href="" class="dropdown-item ">Coffee Gator</a>
-                <a href="" class="dropdown-item ">Grosche</a>
-                <a href="" class="dropdown-item">All French Press</a>
+                <a href="{% url 'products' %}?category=le_creuset" class="dropdown-item">Le Creuset</a>
+                <a href="{% url 'products' %}?category=coffee_gator" class="dropdown-item ">Coffee Gator</a>
+                <a href="{% url 'products' %}?category=grosche" class="dropdown-item ">Grosche</a>
+                <a href="{% url 'products' %}?category=le_creuset,coffee_gator,grosche " class="dropdown-item">All French Press</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 PourOver
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Andronicas</a>
-                <a href="" class="dropdown-item ">Kinto</a>
-                <a href="" class="dropdown-item ">Bodum</a>
-                <a href="" class="dropdown-item">All PourOver</a>
+                <a href="{% url 'products' %}?category=andronicas" class="dropdown-item ">Andronicas</a>
+                <a href="{% url 'products' %}?category=kinto" class="dropdown-item ">Kinto</a>
+                <a href="{% url 'products' %}?category=bodum" class="dropdown-item ">Bodum</a>
+                <a href="{% url 'products' %}?category=andronicas,kinto,bodum" class="dropdown-item">All PourOver</a>
             </div>
         </li>
 
@@ -41,7 +41,7 @@
                 Espresso
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Handpresso</a>
+                <a href="{% url 'products' %}?category=handpresso" class="dropdown-item">Handpresso</a>
             </div>
         </li>
 
@@ -50,6 +50,6 @@
                 Vacuum Coffee Pot
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Bodum</a>
+                <a href="{% url 'products' %}?category=bodum" class="dropdown-item">Bodum</a>
             </div>
         </li>

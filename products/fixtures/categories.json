@@ -27,7 +27,7 @@
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "andronicas ",
+            "name": "andronicas",
             "friendly_name": "Andronicas"
         }
     },
