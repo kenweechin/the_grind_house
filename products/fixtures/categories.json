@@ -3,32 +3,56 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "french_press",
-            "friendly_name": "French Press"
+            "name": "le_creuset",
+            "friendly_name": "Le Creuset"
         }
     },
     {
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "pour_over",
-            "friendly_name": "Pour Over"
+            "name": "coffee_gator",
+            "friendly_name": "Coffee Gator"
         }
     },
     {
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "espresso",
-            "friendly_name": "Espresso"
+            "name": "grosche",
+            "friendly_name": "Grosche"
         }
     },
     {
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "vacuum_pot ",
-            "friendly_name": "Vacuum Pot"
+            "name": "andronicas ",
+            "friendly_name": "Andronicas"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "kinto",
+            "friendly_name": "Kinto"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "bodum",
+            "friendly_name": "Bodum"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "handpresso",
+            "friendly_name": "Handpresso"
         }
     }
 ]

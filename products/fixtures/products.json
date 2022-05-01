@@ -22,7 +22,7 @@
            "name":"Coffee Gator Dual-Wall Insulated Stainless Steel Brewer French Press",
            "description":"This cafetiere is vacuum-layered & double-filtered to extract a fuller flavour. Discover Utopia when you pour a piping-hot cup from our divine coffee decanter",
            "price":69.99,
-           "category":1,
+           "category":2,
            "rating":4.9,
            "image":"coffeegator_silver.jpg"
         }
@@ -34,7 +34,7 @@
            "name":"Grosche Pyrex Borosilicate Glass Beaker French Press",
            "description":"Dual filter system, with the main press being one, and another one in the lid as well. When You make your coffee, turn the lid to close the press while your coffee or tea steeps, and turn it again to open it to pour. That will retain heat and allow for better flavor for your coffee",
            "price":45.99,
-           "category":1,
+           "category":3,
            "rating":4.8,
            "image":"grosche_gold.jpg"
         }
@@ -46,7 +46,7 @@
            "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper",
            "description":"Premium coffee brewing tool for a superior coffee experience that makes every cup special",
            "price":49.99,
-           "category":2,
+           "category":4,
            "rating":4.6,
            "image":"andronicas_pourover.jpg"
         }
@@ -58,7 +58,7 @@
            "name":"Kinto Steel Brewer Stand",
            "description":"Made by casting, the brewer stand intrigues with its rough look. It comes with a porcelain brewer with glaze rich in texture. The height of the stand can be adjusted, letting you use it with avarious vessels from a mug to a tall server.",
            "price":69.99,
-           "category":2,
+           "category":5,
            "rating":4.6,
            "image":"kinto_pourover.jpg"
         }
@@ -70,7 +70,7 @@
            "name":"Bodum Pour Over Coffee Maker with Filter",
            "description":"The Bodum Pour Over Coffee Maker has a fine mesh stainless steel filter that eliminates need for paper filters. This promotes the pure unfolding of the flavor - no more paper filters that trap the essential oils and flavors.",
            "price":53.99,
-           "category":2,
+           "category":6,
            "rating":4.6,
            "image":"bodum_pourover.jpg"
         }
@@ -82,7 +82,7 @@
            "name":"Portable Espresso Machine For The Car",
            "description":"A perfect fit capsure espresso machine inside your vehicle. It plugs into the 12/24 volt socket and can sit in the cup holder. Reliable, intuitive, nimble and with just the right digital touch, it prepares a prefect espresso, in 2 minutes and a half.",
            "price":79.99,
-           "category":3,
+           "category":7,
            "rating":4.9,
            "image":"handpresso_black.jpg"
         }
@@ -94,7 +94,7 @@
            "name":"Vacuum Coffee Pot",
            "description":"The age-old process of siphon brewing is coffee showmanship at its finest, blending art and science with a dash of gravity-defying magic.",
            "price":55.99,
-           "category":4,
+           "category":6,
            "rating":4.3,
            "image":"vacuum_pot.jpg"
         }
