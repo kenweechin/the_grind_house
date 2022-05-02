@@ -94,7 +94,7 @@
            "name":"Vacuum Coffee Pot",
            "description":"The age-old process of siphon brewing is coffee showmanship at its finest, blending art and science with a dash of gravity-defying magic.",
            "price":55.99,
-           "category":6,
+           "category":8,
            "rating":4.3,
            "image":"vacuum_pot.jpg"
         }

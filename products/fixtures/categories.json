@@ -54,5 +54,13 @@
             "name": "handpresso",
             "friendly_name": "Handpresso"
         }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "mocca",
+            "friendly_name": "Mocca"
+        }
     }
 ]
