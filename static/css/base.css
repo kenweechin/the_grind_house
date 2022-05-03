@@ -41,13 +41,13 @@ body {
     color: #F95700FF;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: white;
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus,
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
+    background: #2E5266FF;
     color: white;
 }
 
