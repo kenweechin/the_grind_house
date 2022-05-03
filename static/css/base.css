@@ -33,6 +33,7 @@ body {
     color: #F95700FF;
     min-width: 260px;
     font-weight: bold;
+    margin-top: 10rem;
 }
 
 .btn-blue {
@@ -71,7 +72,7 @@ body {
 }
 
 .slogan {
-    margin-top: 15rem;
+    margin-top: 13rem;
 }
 
 .overlay {
@@ -91,6 +92,10 @@ body {
   .container {
     max-width: 80%;
   }
+
+  .slogan {
+    margin-top: 18rem;
+}
 }
 
 /* fixed top navbar only on medium and up */
@@ -106,6 +111,10 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
+    .slogan {
+        margin-top: 18rem;
+    }
 }
 
 /* Pushing the top section in mobile resolution */
@@ -113,6 +122,15 @@ body {
     .header-container {
         padding-top: 180px;
     }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .slogan {
+        margin-top: 18rem;
+    }
+
     body {
         height: calc(100vh-180px);
     }
