@@ -29,14 +29,15 @@ body {
 }
 
 .shop-button {
-    background: black;
-    color: white;
+    background: #2E5266FF;
+    color: #F95700FF;
     min-width: 260px;
+    font-weight: bold;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+.btn-blue {
+    background: #2E5266FF;
+    color: #F95700FF;
 }
 
 .shop-now-button:hover,
@@ -45,20 +46,28 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: white;
     color: white;
 }
 
+.text-orange {
+    color: #F95700FF !important;
+}
+
+.text-blue {
+    color: #2E5266FF !important;
+}
+
 .text-black {
-    color: #000 !important;
+    color: black;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.border-blue {
+    border: 3px solid #2E5266FF !important;
 }
 
-.bg-black {
-    background: #000 !important;
+.bg-blue {
+    background: #2E5266FF !important;
 }
 
 .slogan {
