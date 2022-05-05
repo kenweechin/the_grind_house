@@ -4,14 +4,12 @@
        "model":"products.product",
        "fields":{
           "sku":"03000",
-          "name":"Le Creuset Ceramic Cafetiere French Press",
+          "name":"Le Creuset Ceramic Cafetiere French Press - Blue",
           "description":"Sturdy enamelled stoneware cafetière French press with stainless steel mesh and plunger",
           "price":49.99,
           "category":1,
           "rating":4.9,
-          "image":"lecreuset_blue.jpg",
-          "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp"
-          
+          "image":"lecreuset_blue.jpg"
        }
     },
     {
@@ -19,7 +17,7 @@
         "model":"products.product",
         "fields":{
            "sku":"03001",
-           "name":"Coffee Gator Dual-Wall Insulated Stainless Steel Brewer French Press",
+           "name":"Coffee Gator Dual-Wall Insulated Stainless Steel Brewer French Press - Silver",
            "description":"This cafetiere is vacuum-layered & double-filtered to extract a fuller flavour. Discover Utopia when you pour a piping-hot cup from our divine coffee decanter",
            "price":69.99,
            "category":2,
@@ -98,5 +96,41 @@
            "rating":4.3,
            "image":"vacuum_pot.jpg"
         }
-     }
+     },{
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"03008",
+         "name":"Le Creuset Ceramic Cafetiere French Press - Red",
+         "description":"Sturdy enamelled stoneware cafetière French press with stainless steel mesh and plunger",
+         "price":49.99,
+         "category":1,
+         "rating":4.3,
+         "image":"lecreuset_red.jpg"
+         }
+      },{
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"03009",
+         "name":"Coffee Gator Dual-Wall Insulated Stainless Steel Brewer French Press - Orange",
+         "description":"This cafetiere is vacuum-layered & double-filtered to extract a fuller flavour. Discover Utopia when you pour a piping-hot cup from our divine coffee decanter",
+         "price":69.99,
+         "category":2,
+         "rating":4.9,
+         "image":"coffeegator_orange.jpg"
+         }
+      },{
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"03010",
+         "name":"Grosche Stainless Steel Plunger Borosilicate Glass Beaker French Press",
+           "description":"Durable Borosilicate Glass carafe beaker which is heat resistant sits in Stylish insulated plastic frame which make the whole process of making and pouring very easy and prevent wobbling",
+           "price":45.99,
+           "category":3,
+           "rating":4.8,
+           "image":"grosche_white.jpg"
+         }
+      }
 ]
