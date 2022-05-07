@@ -41,12 +41,12 @@
         "model":"products.product",
         "fields":{
            "sku":"03003",
-           "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper",
+           "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper - pink",
            "description":"Premium coffee brewing tool for a superior coffee experience that makes every cup special",
            "price":49.99,
            "category":4,
            "rating":4.6,
-           "image":"andronicas_pourover.jpg"
+           "image":"andronicas_pourover_pink.jpg"
         }
      },{
         "pk":5,
@@ -126,11 +126,95 @@
       "fields":{
          "sku":"03010",
          "name":"Grosche Stainless Steel Plunger Borosilicate Glass Beaker French Press",
-           "description":"Durable Borosilicate Glass carafe beaker which is heat resistant sits in Stylish insulated plastic frame which make the whole process of making and pouring very easy and prevent wobbling",
-           "price":45.99,
-           "category":3,
-           "rating":4.8,
-           "image":"grosche_white.jpg"
+         "description":"Durable Borosilicate Glass carafe beaker which is heat resistant sits in Stylish insulated plastic frame which make the whole process of making and pouring very easy and prevent wobbling",
+         "price":45.99,
+         "category":3,
+         "rating":4.8,
+         "image":"grosche_white.jpg"
+         }
+      },{
+         "pk":12,
+         "model":"products.product",
+         "fields":{
+         "sku":"03011",
+         "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper - Green",
+         "description":"Premium coffee brewing tool for a superior coffee experience that makes every cup special",
+         "price":49.99,
+         "category":4,
+         "rating":4.6,
+         "image":"andronicas_pourover_green.jpg"
+         }
+      },{
+         "pk":13,
+         "model":"products.product",
+         "fields":{
+         "sku":"03012",
+         "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper - Blue",
+         "description":"Premium coffee brewing tool for a superior coffee experience that makes every cup special",
+         "price":49.99,
+         "category":4,
+         "rating":4.6,
+         "image":"andronicas_pourover_blue.jpg"
+         }
+      },{
+         "pk":14,
+         "model":"products.product",
+         "fields":{
+         "sku":"03013",
+         "name":"Andronicas Stainless Steel Pour Over Coffee Pot with Manual Dripper - Orange",
+         "description":"Premium coffee brewing tool for a superior coffee experience that makes every cup special",
+         "price":49.99,
+         "category":4,
+         "rating":4.6,
+         "image":"andronicas_pourover_orange.jpg"
+         }
+      },{
+         "pk":15,
+         "model":"products.product",
+         "fields":{
+         "sku":"03014",
+         "name":"Kinto PourOver Coffee Dripper",
+         "description":"This pour over coffee dripper allows you to unlock the full potential of your coffee beans. The fine mesh, stainless steel filter eliminates the need for paper filters, which generate waste and strip the coffee of its full flavor. Leaving you to enjoy all the taste – with none of the waste!.",
+         "price":65.99,
+         "category":5,
+         "rating":4.6,
+         "image":"kinto_pourover_duallayer.jpg"
+         }
+      },{
+         "pk":16,
+         "model":"products.product",
+         "fields":{
+         "sku":"03015",
+         "name":"Bodum Pour Over Coffee Maker with Red Rubber Handle",
+         "description": "Made from premium quality borosilicate glass that doesn’t absorb taste or aroma, the beautifully shaped carafe is fitted with a permanent stainless steel filter for truly sustainable brewing. No wasteful paper filters that trap essential oils and flavor; just pure flavorsome coffee",
+         "price":53.99,
+         "category":6,
+         "rating":4.6,
+         "image":"bodum_pourover_red.jpg"
+         }
+      },{
+         "pk":17,
+         "model":"products.product",
+         "fields":{
+         "sku":"03016",
+         "name":"Pump Manual Espresso Machine",
+         "description": "You can use both ground espresso coffee and E.S.E pods in the Handpresso Pump portable espresso maker. Handpresso has indeed created an espresso machine with the ultimate versatility. No electricity is needed",
+         "price":64.99,
+         "category":7,
+         "rating":4.4,
+         "image":"pump_espresso.jpg"
+         }
+      },{
+         "pk":18,
+         "model":"products.product",
+         "fields":{
+         "sku":"03017",
+         "name":"Mocca Vacuum Coffee Maker With Burner And Accessories",
+         "description":"The vacuum coffee brewing method has long captivated coffee enthusiasts, as it ensures that all the precious oils are extracted from the coffee beans. The result is coffee that’s deliciously pure in aroma with a light body and heavenly taste. Thanks to the glass construction, you can admire the eye-catching brewing process before savoring your coffee",
+         "price":69.99,
+         "category":8,
+         "rating":4.9,
+         "image":"coffeemaker_burner_accessories.jpg"
          }
       }
 ]
