@@ -41,6 +41,10 @@ body {
     color: #F95700FF;
 }
 
+
+.btn-outline-explore:hover,
+.btn-outline-explore:active,
+.btn-outline-explore:focus, 
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
@@ -49,6 +53,13 @@ body {
 .btn-blue:focus {
     background: #2E5266FF;
     color: white;
+}
+
+.btn-outline-explore:hover,
+.btn-outline-explore:active,
+.btn-outline-explore:focus {
+    background: #2E5266FF;
+    color: #F95700FF;
 }
 
 .text-orange {
@@ -83,6 +94,31 @@ body {
     position:fixed;
     background: white;
     z-index: -1;
+}
+
+.btn-outline-explore {
+    background: #2E5266FF !important;
+    color: white;
+    border: 1px solid; 
+    width: 60%;
+}
+
+.btn-outline-add {
+    background: white;
+    color: #2E5266FF;
+    border: 1px solid;
+    width: 60%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#btn-explore {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quantity {
+    width: 30%;
 }
 
 /* -------------------------------- Media Queries */
