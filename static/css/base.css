@@ -117,6 +117,26 @@ body {
     margin-bottom: 1rem;
 }
 
+.btn-outline-shopping {
+    background: white;
+    color: #2E5266FF;
+    border: 2px solid;
+    width: 20%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    width: 40%;
+}
+
+.btn-outline-checkout {
+    background: #2E5266FF;
+    color: #F95700FF;
+    border: 2px solid;
+    width: 20%;
+    font-size: 1rem;  
+    width: 40%;
+}
+
 .quantity {
     width: 30%;
 }
