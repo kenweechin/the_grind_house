@@ -43,6 +43,16 @@
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            {% with product.volumes as v %}
+                            {% if v %}
+                                <div class="col-12">
+                                    <p><strong>Volume:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_volume" id='id_product_volume'>
+                                        <option value="50" selected>50ml</option>
+                                        <option value="80">80ml</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group quantity">
@@ -61,8 +71,8 @@
                                     <p id="btn-explore">EXPLORE MORE !</p>
                                 </a> 
                             </div> 
-
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
