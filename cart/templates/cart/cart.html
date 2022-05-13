@@ -48,11 +48,11 @@
                                 <td class="py-3">
                                     <p class="my-0">€{{ item.product.price }}</p>
                                 </td>
-                                <td class="py-3 w-25">
+                                <td class="py-3 ">
                                     <form class="form update-form" method="POST" action="">
                                         {% csrf_token %}
                                         <div class="form-group quantity">
-                                            <div class="input-group">
+                                            <div class="input-group flex-nowrap ">
                                                 <div class="input-group-prepend">
                                                     <button class="qty-decrement rounded-0 btn-blue btn-sm" data-item_id="{{ item.item_id }}"
                                                         id = "qty-decrement_{{ item.item_id  }}">
