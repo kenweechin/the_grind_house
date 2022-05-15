@@ -77,8 +77,9 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-size=" {{ item.size }}"><small>Remove</small></a>
+                                    <div class="text-center"><a class="update-link text-info "><u><small>UPDATE</small></u></a></div>
+                                    <div class="text-center"><a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-size=" {{ item.size }}"><u><small>REMOVE</small></u></a></div>
+                                    
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">€{{ item.product.price }}</p>
