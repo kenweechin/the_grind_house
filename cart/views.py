@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -44,4 +44,56 @@ def add_to_cart(request, item_id):
     # Override the variable in the session with the updated cart
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def adjust_cart(request, item_id):
+    """ Adjust cart quantity """
+
+    # Get the quantity from the form and convert it to integer from string 
+    quantity = int(request.POST.get('quantity'))
+    volume = None
+    if 'product_volume' in request.POST:
+        volume = request.POST['product_volume']
+    # Get the cart variable if already exists in the session else create one 
+    cart = request.session.get('cart', {})
+
+    if volume: 
+        if quantity > 0:
+            cart[item_id]['items_by_volume'][volume] = quantity
+        else:
+            del cart[item_id]['items_by_volume'][volume]
+            if not cart[item_id]['items_by_volume']:
+                cart.pop(item_id)
+    else:
+        if quantity > 0:
+            cart[item_id] = quantity
+        else:
+            cart.pop(item_id) 
     
+    # Override the variable in the session with the updated cart
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+
+
+def remove_cart(request, item_id):
+    """ Remove cart quantity """
+
+    try:
+        volume = None
+        if 'product_volume' in request.POST:
+            volume = request.POST['product_volume']
+        # Get the cart variable if already exists in the session else create one 
+        cart = request.session.get('cart', {})
+
+        if volume: 
+            del cart[item_id]['items_by_volume'][volume]
+            if not cart[item_id]['items_by_volume']:
+                cart.pop(item_id)
+        else:
+            cart.pop(item_id)  
+        
+        # Override the variable in the session with the updated cart
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 
 {% block page_header %}
@@ -49,7 +50,7 @@
                                     <p class="my-0">€{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 ">
-                                    <form class="form update-form" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group quantity">
                                             <div class="input-group flex-nowrap ">
@@ -77,18 +78,17 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="text-center"><a class="update-link text-info "><u><small>UPDATE</small></u></a></div>
-                                    <div class="text-center"><a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-size=" {{ item.size }}"><u><small>REMOVE</small></u></a></div>
-                                    
+                                    <a class="update-link text-info d-block text-center"><u><small>UPDATE</small></u></a>
+                                    <a class="remove-item text-danger d-block text-center" id="remove_{{ item.item_id }}" data-product_size=" {{ item.volume }}"><u><small>REMOVE</small></u></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price }}</p>
+                                    <p class="my-0">€{{ item.product.price | sum_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
@@ -146,9 +146,9 @@
     $('.remove-item').click(function(e){
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var volume = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var volume = $(this).data('product_volume');
+        var url = `/cart/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_volume': volume};
 
         $.post(url,data)
         .done(function() {
