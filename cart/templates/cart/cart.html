@@ -73,13 +73,13 @@
                                                     </button>
                                                 </div>
                                                 {% if item.product.volumes %}
-                                                    <input type="hidden" nam="product_volume" value="{{ item.volume }}">
+                                                    <input type="hidden" name="product_volume" value="{{ item.volume }}">
                                                 {% endif %}
                                             </div>
                                         </div>
                                     </form>
                                     <a class="update-link text-info d-block text-center"><u><small>UPDATE</small></u></a>
-                                    <a class="remove-item text-danger d-block text-center" id="remove_{{ item.item_id }}" data-product_size=" {{ item.volume }}"><u><small>REMOVE</small></u></a>
+                                    <a class="remove-item text-danger d-block text-center" id="remove_{{ item.item_id }}" data-product_volume="{{ item.volume }}"><u><small>REMOVE</small></u></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">€{{ item.product.price | sum_subtotal:item.quantity }}</p>
