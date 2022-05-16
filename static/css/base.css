@@ -149,11 +149,21 @@ body {
 div.form-control.quantity {
     width: 0;
 }
-/*****************************************************  testing  ********************************************************************/
-input#id_qty_9.form-control.qty_input {
-    padding: 1rem;
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999;
 }
-/*******************************************************testing ************************************************************/
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* -------------------------------- Media Queries */
 
