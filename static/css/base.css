@@ -162,7 +162,7 @@ div.form-control.quantity {
 }
 
 .toast-capper {
-    height: 2px;
+    height: 12px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -211,7 +211,7 @@ div.form-control.quantity {
 }
 
 .cart-notification-wrapper {
-    height: 100px;
+    height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
 }
