@@ -106,15 +106,21 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="text-right">
-                                <a href="" class="btn btn-outline-checkout btn-lg rounded-0 text-uppercase py-3">
-                                    <span class="text-uppercase" id="checkout-text">Secure Checkout</span>
+                                <a href= "{% url 'checkout' %}" class="btn btn-blue rouded-0 btn-lg">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
                                 </a>
                             </td>
                         </tr>
+                        <!-- <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{ url 'checkout' }" class="btn btn-outline-checkout btn-lg rounded-0 text-uppercase py-3">
+                                    <span class="text-uppercase" id="checkout-text">Secure Checkout</span>
+                                </a>
+                            </td>
+                        </tr> -->
                     </table>
                 </div>
                 {% else %}
