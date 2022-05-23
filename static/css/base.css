@@ -215,6 +215,18 @@ div.form-control.quantity {
     overflow-y: auto;
 }
 
+.notifier  {
+    animation: pulse 1500ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: #F95700FF 0 0 0 0;
+    }
+    75% {
+        box-shadow: #ff69b400 0 0 0 16px;
+    }
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
