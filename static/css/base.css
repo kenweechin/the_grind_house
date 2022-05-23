@@ -215,6 +215,7 @@ div.form-control.quantity {
     overflow-y: auto;
 }
 
+/* Pulse animation effect - derived and edited from "FrontEndChannels" from Instagram */
 .notifier  {
     animation: pulse 1500ms infinite;
 }
@@ -226,6 +227,11 @@ div.form-control.quantity {
     75% {
         box-shadow: #ff69b400 0 0 0 16px;
     }
+}
+
+.hover-slider:hover {
+    box-shadow: inset 200px 0 0 0 #F95700FF;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 /* -------------------------------- Media Queries */
 
