@@ -11,6 +11,15 @@ body {
     font-family: 'Playfair-display';
 }
 
+.navbar {
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+.nav-link {
+    padding: 0;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -241,6 +250,21 @@ div.form-control.quantity {
     margin-top: 280px;
     font-size: 2rem;
 }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
 
 @media (max-width: 1199px) {
