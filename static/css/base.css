@@ -241,7 +241,6 @@ div.form-control.quantity {
     margin-top: 280px;
     font-size: 2rem;
 }
-
 }
 
 @media (max-width: 1199px) {
@@ -279,12 +278,10 @@ div.form-control.quantity {
     }
 }
 
-/* Pushing the top section in mobile resolution */
 @media (max-width: 768px) {
     .header-container {
         padding-top: 180px;
     }
-
 
     .slogan {
         margin-top: 4rem;
