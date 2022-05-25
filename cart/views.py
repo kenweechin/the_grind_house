@@ -3,7 +3,6 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
 
 def view_cart(request):
     """ A view that renders the cart content page """
@@ -15,17 +14,17 @@ def add_to_cart(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     
-    # Get the quantity from the form and convert it to integer from string 
+    # Get the quantity from the form and convert it to integer from string
     quantity = int(request.POST.get('quantity'))
     # Get the redirect url from the form
     redirect_url = request.POST.get('redirect_url')
     volume = None
     if 'product_volume' in request.POST:
         volume = request.POST['product_volume']
-    # Get the cart variable if already exists in the session else create one 
+    # Get the cart variable if already exists in the session else create one
     cart = request.session.get('cart', {})
 
-    if volume: 
+    if volume:
         # Check if the item is in the cart already
         if item_id in list(cart.keys()):
             # Check if another item of the samd id and same volume exists already
@@ -37,7 +36,7 @@ def add_to_cart(request, item_id):
                 # Or else set equal to the quantity which is a new volume for the item
                 cart[item_id]['items_by_volume'][volume] = quantity
                 messages.success(request, f'Added volume {volume}ml {product.name} to your cart')
-        else: 
+        else:
             # Add the item if is not in the cart
             cart[item_id] = {'items_by_volume': {volume: quantity}}
             messages.success(request, f'Added volume {volume}ml {product.name} to your cart')
@@ -60,18 +59,18 @@ def adjust_cart(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
 
-    # Get the quantity from the form and convert it to integer from string 
+    # Get the quantity from the form and convert it to integer from string
     quantity = int(request.POST.get('quantity'))
     volume = None
     if 'product_volume' in request.POST:
         volume = request.POST['product_volume']
-    # Get the cart variable if already exists in the session else create one 
+    # Get the cart variable if already exists in the session else create one
     cart = request.session.get('cart', {})
 
-    if volume: 
+    if volume:
         if quantity > 0:
             cart[item_id]['items_by_volume'][volume] = quantity
-            messages.success(request, f'Updated volume {volume}ml {product.name}quantity to {cart[item_id]["items_by_volume"][volume]}')
+            messages.success(request, f'Updated volume {volume}ml {product.name} quantity to {cart[item_id]["items_by_volume"][volume]}')
         else:
             del cart[item_id]['items_by_volume'][volume]
             if not cart[item_id]['items_by_volume']:
@@ -82,7 +81,7 @@ def adjust_cart(request, item_id):
             cart[item_id] = quantity
             messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
         else:
-            cart.pop(item_id) 
+            cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from your cart')
     
     # Override the variable in the session with the updated cart
@@ -98,16 +97,16 @@ def remove_cart(request, item_id):
         volume = None
         if 'product_volume' in request.POST:
             volume = request.POST['product_volume']
-        # Get the cart variable if already exists in the session else create one 
+        # Get the cart variable if already exists in the session else create one
         cart = request.session.get('cart', {})
 
-        if volume: 
+        if volume:
             del cart[item_id]['items_by_volume'][volume]
             if not cart[item_id]['items_by_volume']:
                 cart.pop(item_id)
             messages.success(request, f'Removed volume {volume}ml {product.name} from your cart')
         else:
-            cart.pop(item_id)  
+            cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from your cart')
         
         # Override the variable in the session with the updated cart
