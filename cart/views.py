@@ -32,15 +32,15 @@ def add_to_cart(request, item_id):
             if volume in cart[item_id]['items_by_volume'].keys():
                 # Then increment the quantity for that volume
                 cart[item_id]['items_by_volume'][volume] += quantity
-                messages.success(request, f'Updated volume {volume} {product.name} quantity to {cart[item_id]["items_by_volume"][volume]}')
+                messages.success(request, f'Updated volume {volume}ml {product.name} quantity to {cart[item_id]["items_by_volume"][volume]}')
             else:
                 # Or else set equal to the quantity which is a new volume for the item
                 cart[item_id]['items_by_volume'][volume] = quantity
-                messages.success(request, f'Added volume {volume} {product.name} to your cart')
+                messages.success(request, f'Added volume {volume}ml {product.name} to your cart')
         else: 
             # Add the item if is not in the cart
             cart[item_id] = {'items_by_volume': {volume: quantity}}
-            messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}')
+            messages.success(request, f'Added volume {volume}ml {product.name} to your cart')
     else:
         if item_id in list(cart.keys()):
             # Update cart quantity if cart already exists
@@ -71,12 +71,12 @@ def adjust_cart(request, item_id):
     if volume: 
         if quantity > 0:
             cart[item_id]['items_by_volume'][volume] = quantity
-            messages.success(request, f'Updated volume {volume} {product.name}quantity to {cart[item_id]["items_by_volume"][volume]}')
+            messages.success(request, f'Updated volume {volume}ml {product.name}quantity to {cart[item_id]["items_by_volume"][volume]}')
         else:
             del cart[item_id]['items_by_volume'][volume]
             if not cart[item_id]['items_by_volume']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed volume {volume} {product.name} from your cart')
+            messages.success(request, f'Removed volume {volume}ml {product.name} from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
@@ -105,7 +105,7 @@ def remove_cart(request, item_id):
             del cart[item_id]['items_by_volume'][volume]
             if not cart[item_id]['items_by_volume']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed volume {volume} {product.name} from your cart')
+            messages.success(request, f'Removed volume {volume}ml {product.name} from your cart')
         else:
             cart.pop(item_id)  
             messages.success(request, f'Removed {product.name} from your cart')
