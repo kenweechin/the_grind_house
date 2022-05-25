@@ -2,12 +2,15 @@ html {
     height: 100%;
 }
 
-body {
-    background: url('/media/home_background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
+.background-image {
+    background: url("/media/home_background.jpg") no-repeat center;
     height: 100vh;
+    background-size: cover;
     color: #555;
+    font-family: 'Playfair-display';
+}
+
+body {
     font-family: 'Playfair-display';
 }
 
@@ -167,6 +170,10 @@ div.form-control.quantity {
 
 .toast-capper {
     height: 12px;
+}
+
+.main-blog {
+    font-size: 2rem;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */

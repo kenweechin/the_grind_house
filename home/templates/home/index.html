@@ -11,28 +11,32 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container ">
+    <section class="background-image">
+        <div class="container ">
+            <div class="row">
+                <div class="col-6 col-md-7 my-auto">
+                    <p class="display-5 logo-font text-black slogan">
+                        Experience the Unordinary Coffee Maker!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="my-2">
+                <h4 class="text-center">
+                    <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Discover More!</a>
+                </h4>
+            </div>
+        </div>
+    </section>
+    <div class="container">
         <div class="row">
-            <div class="col-6 col-md-7 my-auto">
-                <p class="display-5 logo-font text-black slogan">
-                    Experience the Unordinary Coffee Maker!
+            <div class="col-12 my-auto">
+                <p class="text-center main-blog text-black my-5">
+                    <a href="{% url 'frontpage' %}" class="text-uppercase text-black">blog</a>
                 </p>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="my-2">
-            <h4 class="text-center">
-                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Discover More!</a>
-            </h4>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="my-2">
-            <h4 class="text-center">
-                <a href="{% url 'frontpage' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">blog!</a>
-            </h4>
-        </div>
-    </div>
 {% endblock %}
+
