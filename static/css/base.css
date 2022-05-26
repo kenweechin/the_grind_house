@@ -23,6 +23,7 @@ html {
     padding-top: 3rem;
 }
 
+/* from uiverse.io by Adamgiebl */
 .blog-button {
     font-size: 15px;
     padding: 0.7em 2.7em;
@@ -41,6 +42,32 @@ html {
 
 .card-body-button {
     padding-top: 15rem;
+}
+
+.card-frontpage {
+    box-shadow: 0 16px 48px #4b6279;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+} 
+
+#top-review {
+    width: 40%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.post-date {
+    margin-top: 2rem;
+}
+
+.post-title {
+    margin-top: 3rem;
+}
+
+a.post-link {
+    color: rgba(1, 97, 92, 0.719);
+
 }
 
 body {

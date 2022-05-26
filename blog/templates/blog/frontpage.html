@@ -10,27 +10,28 @@
 
 {% block content %}
     <div class="overlay"></div>
-
     <div class="container">
         <div class="row">
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-black text-center">Welcome to my blog.</h3>
-                    </p>
+                    <h2 class=" site-heading my-4 mt-3 text-black text-center">Top Products Review</h2>
                 </div>
+                <hr>
             </div>
         </div>
-        {% for post in posts %}
-            <div class="post block">
-                <h2 class="subtitle">{{ post.title }}</h2>
 
-                <p>{{ post.content }}</p>
 
-                <small>Posted at {{ post.created_on }}</small>
-
-                <a href = "{% url 'post_list' post.slug%}">Read More!</a>
+    <div class="container">    
+        <div class="row">
+            <div class="card-frontpage col-md-12 mb-4 mt-3 left top text-center">
+                {% for post in posts %}
+                <h3 class="post-title">{{ post.title }}</h3> 
+                <p class="font-italic">{{ post.content }}</p>
+                <p class="post-date"><small>Posted at {{ post.created_on }}</small></p>
+                <a href = "{% url 'post_list' post.slug%}" class="post-link">Read More!</a>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
     
 {% endblock %}
