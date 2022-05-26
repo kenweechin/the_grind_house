@@ -12,10 +12,10 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col 12 col-md-6 col-lg-4 offset-lg-1 mt-5">
+            <div class="col 12 offset-lg-1 mt-5">
                 <h1 class="title"> {{ post.title }} </h1>
                 <small>Posted at {{ post.created_on}}</small>
-                <p><strong>{{ post.content }}</strong></p>
+                <p class="font-italic">{{ post.content }}</p>
 
                 <hr>
 
@@ -39,16 +39,17 @@
                     </div>
                 {% endfor %}
                 <hr>
-
+        <div class="row">
+            <div class="col 12 text-center mt-5">        
                 <h2 class="subtitle">Add comment</h1>
                 <form method="POST" action="">
                     {% csrf_token %}
 
                     {{ form.as_p }}
 
-                    <div class="field">
+                    <div class="col 12 text-center mt-5 field">
                         <div class="control">
-                            <button class="button is-success">Submit</button>
+                            <button class="blog-button is-success">Submit</button>
                         </div>
                     </div>
                 </form>
