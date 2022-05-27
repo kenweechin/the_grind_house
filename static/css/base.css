@@ -217,6 +217,10 @@ div.form-control.quantity {
     width: 0;
 }
 
+.form-control {
+    border: 1.5px solid #2E5266FF;
+}
+
 .message-container {
     position: fixed;
     top: 72px;
