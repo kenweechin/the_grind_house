@@ -179,3 +179,12 @@ FREE_DELIVERY_THRESHOLD = 150
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Stripe
+STANDARD_DELIVERY_PERCENTAGE = 15
+FREE_DELIVERY_THRESHOLD = 150
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+
+
