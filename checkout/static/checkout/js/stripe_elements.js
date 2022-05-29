@@ -55,8 +55,10 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+    // Trigger fadeToggle effect once clicked on Submit button
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     // Call the confirm card payment method
-    
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             // Provide the card to stripe
@@ -72,6 +74,8 @@ form.addEventListener('submit', function(ev) {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
             // If error occurred, re-enable the card element and submit
             // button to allow the user to fix it. 
             card.update({ 'disabled': false});
