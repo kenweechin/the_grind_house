@@ -20,8 +20,6 @@ def webhook(request):
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None
 
-    print("WEBHOOK ENTERED")
-
     try:
         event = stripe.Webhook.construct_event(
         payload, sig_header, wh_secret
@@ -35,9 +33,6 @@ def webhook(request):
     except Exception as e:
         return HttpResponse(content=e, status=400)
 
-    print('Success')
-    return HttpResponse(status=200)
-    
     # Set up a webhook handler
     handler = StripeWH_Handler(request)
 
