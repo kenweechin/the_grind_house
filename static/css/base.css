@@ -395,8 +395,10 @@ div.form-control.quantity {
     border-color: #8b0412;
 }
 
-.custom-control-label {
+.custom-control-label,
+.emtpy-query {
     color: #8b0412;
+    text-align: center;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {

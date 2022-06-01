@@ -42,8 +42,8 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
+            query = request.GET['q'].strip()
+            if query == "":
                 messages.error(request, "There is not input in the query.")
                 return redirect(reverse('products'))
 

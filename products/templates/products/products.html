@@ -22,8 +22,11 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div class="row">
+                {% if products|length == 0 %} 
+                        <h4 class="emtpy-query">No products found with that search query!</h4>
+                    {% endif %}
                     {% for product in products %}
+                <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
