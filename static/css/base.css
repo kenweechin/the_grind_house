@@ -471,6 +471,28 @@ div.form-control.quantity {
     body {
         height: calc(100vh-180px);
     }
+    
+    .btn.btn-outline-blue.rounded-0,
+    .btn.btn-blue.rounded-0,
+    .btn-outline-add,
+    .btn-outline-explore {
+        padding: .3rem .3rem;
+        font-size: .5rem;
+    }
+
+    .btn-outline-explore {
+        font-size: .5rem;
+    }
+
+    .btn.btn-outline-blue.rounded-0.btn-lg,
+    .btn.btn-blue.rounded-0.btn-lg {
+        padding: .3rem .3rem;
+        font-size: .7rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .2rem, .5rem !important;
+    }
 }
 
 @media (max-width: 768px) {
