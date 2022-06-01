@@ -493,6 +493,10 @@ div.form-control.quantity {
     .increment-qty, .decrement-qty {
         padding: .2rem, .5rem !important;
     }
+
+    .allauth-form-inner-content {
+        padding-top: 8rem;
+    }
 }
 
 @media (max-width: 768px) {
