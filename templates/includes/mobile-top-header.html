@@ -1,14 +1,14 @@
     <li class="list-inline-item text-center nav-link">
         <a href="{% url 'home' %}" class="d-block d-lg-none">
-            <div><i class="fas fa-home fa-lg text-blue"></i></div>
-            <p class="my-0 text-blue">Home</p>
+            <div><i class="fas fa-home fa-sm text-blue"></i></div>
+            <p class="my-0 text-blue small">Home</p>
         </a>
     </li>
     <li class="list-inline-item">
         <a class="text-blue nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-search fa-lg"></i></div>
-                <p class="my-0">Search</p>
+                <div><i class="fas fa-search fa-sm"></i></div>
+                <p class="my-0 small">Search</p>
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -29,8 +29,8 @@
     <li class="list-inline-item dropdown">
         <a class="text-blue nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <div><i class="fas fa-user fa-sm"></i></div>
+                <p class="my-0 small">My Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -49,8 +49,8 @@
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-blue{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
             <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                <p class="my-0">
+                <div><i class="fas fa-shopping-bag fa-sm"></i></div>
+                <p class="my-0 small">
                     {% if grand_total %}
                         ${{ grand_total|floatformat:2 }}
                     {% else %}
