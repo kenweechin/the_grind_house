@@ -322,9 +322,7 @@ div.form-control.quantity {
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-
 /* -------------------------------- Allauth form styling */
-
 .allauth-form-inner-content {
     padding-top: 10rem;
 }
@@ -382,7 +380,6 @@ div.form-control.quantity {
 }
 
 /* -------------------------------- Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -428,8 +425,6 @@ div.form-control.quantity {
     font-size: 2rem;
     }
 }
-
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -501,10 +496,6 @@ div.form-control.quantity {
     .increment-qty, .decrement-qty {
         padding: .2rem, .5rem !important;
     }
-
-    .allauth-form-inner-content {
-        padding-top: 8rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -520,7 +511,7 @@ div.form-control.quantity {
     body {
         height: calc(100vh-180px);
     }
-}
+} 
 
 /* Adjust shopping button width in different resolution in the cart page */
 @media (min-width: 320px) {

@@ -44,9 +44,7 @@
                 <h2 class="subtitle">Add comment</h1>
                 <form method="POST" action="">
                     {% csrf_token %}
-
-                    {{ form.as_p }}
-
+                    {{ form|crispy }}
                     <div class="col 12 text-center mt-5 field">
                         <div class="control">
                             <button class="blog-button is-success">Submit</button>
