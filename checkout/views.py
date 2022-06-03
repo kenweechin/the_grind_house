@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -12,6 +13,7 @@ from cart.contexts import cart_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -59,7 +61,7 @@ def checkout(request):
                 try:
                     # Get the product id out of the cart
                     product = Product.objects.get(id=item_id)
-                    # If value is an integer / no volume 
+                    # If value is an integer / no volume
                     # The quantity will be just the item_data
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -69,7 +71,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        # Iterate through each volume and create line item if the has volumes
+                        # Iterate through each volume and create line item
                         for volume, quantity in item_data['items_by_volume'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
@@ -81,7 +83,8 @@ def checkout(request):
                 # If product does not exist, display the error message
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the products in your cart\
+                         wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -90,18 +93,19 @@ def checkout(request):
             # Give the option to the user if they want to save their info
             request.session['save_info'] = 'save-info' in request.POST
             # Return to checkout success
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             # Display the error message if the form is not valid
             messages.error(request, 'Something is not right with your form. \
                 Make sure your information is correct.')
-    else: 
+    else:
         cart = request.session.get('cart', {})
         if not cart:
             messages.error(request, "Your cart is empty now")
             return redirect(reverse('products'))
 
-        current_cart = cart_contents(request) 
+        current_cart = cart_contents(request)
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
@@ -169,7 +173,7 @@ def checkout_success(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            # Create an instance and update the profile 
+            # Create an instance and update the profile
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()

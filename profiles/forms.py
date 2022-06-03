@@ -10,12 +10,12 @@ class UserProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated 
+        Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
-        """  
-        # Call the default init method to set the form up          
+        """
+        # Call the default init method to set the form up
         super().__init__(*args, **kwargs)
-        # Create a dictionary to show up in the form fill 
+        # Create a dictionary to show up in the form fill
         placeholders = {
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
@@ -26,7 +26,7 @@ class UserProfileForm(forms.ModelForm):
         }
 
         # Set the autofocus to "default_phone_number"
-        # Cursor will start in the "default_phone_number" everytime page is loads
+        # Cursor will start in the "default_phone_number" when page is loads
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         # Iterate through the forms fields
         for field in self.fields:
@@ -39,5 +39,6 @@ class UserProfileForm(forms.ModelForm):
                 # Setting all the placeholder attributes to their /
                 # values in the dict.
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-inout'
+            self.fields[field].widget.attrs['class'] = (
+                'border-black rounded-0 profile-form-input')
             self.fields[field].label = False

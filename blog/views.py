@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import CommentForm
 from .models import Post
 
+
 def frontpage(request):
     # Get all the posts from the database
     posts = Post.objects.all()
@@ -17,7 +18,7 @@ def post_list(request, slug):
         form = CommentForm(request.POST)
 
         if form.is_valid():
-            comment = form.save(commit=False)#
+            comment = form.save(commit=False)
             comment.post = post
             comment.save()
 

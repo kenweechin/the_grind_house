@@ -12,4 +12,5 @@ class PostAdmin(admin.ModelAdmin):
     # Prepopulate slug field from title field
     prepopulated_fields = {'slug': ('title',)}
 
+
 admin.site.register(Post, PostAdmin)

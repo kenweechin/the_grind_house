@@ -6,7 +6,6 @@ from django.db.models import Q
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
 
 def all_products(request):
     """ A view to show all products, their sorting and search queries """
@@ -18,18 +17,19 @@ def all_products(request):
     direction = None
 
     if request.GET:
-        # 'sort' is the new parameters derived from "All Coffee Makers" section in main-nav.html 
+        # 'sort' is the new parameters derived from "All Coffee Makers"\
+        #  section in main-nav.html
         if 'sort' in request.GET:
             # Create "sortkey" variable
-            sortkey = request.GET['sort'] 
-            # Copy "sortkey" and name it "sort" 
-            sort = sortkey 
+            sortkey = request.GET['sort']
+            # Copy "sortkey" and name it "sort"
+            sort = sortkey
             # Sort the "name" field
-            if sortkey == 'name': 
+            if sortkey == 'name':
                 sortkey = 'lower_name'
                 # Annotate all products with a new field
-                products = products.annotate(lower_name=Lower('name')) 
-            
+                products = products.annotate(lower_name=Lower('name'))
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -47,7 +47,8 @@ def all_products(request):
                 messages.error(request, "There is not input in the query.")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                    Q(name__icontains=query) | Q(description__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -78,17 +79,19 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only the store owner/admin can perform this action')
+        messages.error(request, 'Sorry, only the store owner/admin \
+                       can perform this action')
         return redirect(reverse('home'))
 
-    if request.method  == 'POST':
+    if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. \
+                                     Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -96,7 +99,7 @@ def add_product(request):
     context = {
         'form': form,
     }
-   
+
     return render(request, template, context)
 
 
@@ -104,7 +107,8 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only the store owner/admin can perform this action')
+        messages.error(request, 'Sorry, only the store owner/admin \
+                       can perform this action')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -115,7 +119,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                           Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -133,9 +138,10 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from the store"""
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only the store owner/admin can perform this action')
+        messages.error(request, 'Sorry, only the \
+                       store owner/admin can perform this action')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
