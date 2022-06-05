@@ -80,7 +80,7 @@ Admin page accessibility:
 | ID 204  | Site User| Receive registration email confirmation | Verify account registration is successful|
 | ID 205  | Site User| Own a personalised user profie | View my purchase history and save my delivery and payment information|
 | Sorting and Searching|
-| ID 301  | Shopper| Search by name or description|Find a product by searching keyword either matching to the title/descrtiption|
+| ID 301  | Shopper| Search by name or description|Find a product by searching keyword either matching to the title/description|
 | ID 302  | Shopper| Sort a specific product category | Easily find the products that fall under a specific category.
 | ID 303  | Shopper| Sort product pricing | View the pricing from the lowest to the highest in an ascending order. 
 | ID 304  | Shopper| Sort product rating | View the rating from the highest to the lowest in a descending order.
@@ -266,7 +266,6 @@ The product management page allows the admin to add new product to the store. Th
 
 ## EDITORS
 * [LucidChart](https://lucid.app/documents#/dashboard) - Used to create Entity Relationship Diagrams of the database.
-
 * [ResizeImage](https://resizeimage.net/) - For resizing images.
 
 ## OTHERS
@@ -274,6 +273,50 @@ The product management page allows the admin to add new product to the store. Th
 * [Gitignore](https://www.toptal.com/developers/gitignore) - Font and icon toolkit.
 * [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server for UNIX.
 * [Slack](https://app.slack.com/client/T0L30B202) - A collaboration hub that connects your organization.
+
+# Testing (Manual)
+
+### **Responsiveness
+The web application was tested across multple device screen sizes(iphone SE, Samsung S20 Ultra, iPad Air, iPad Pro, Laptop, Desktop)
+
+### **Browser Compatibility 
+The web application was tested across these browers: Google Chrome, Firefox, and Microsoft Edge.
+
+### **Test Cases for the user stories:**
+
+| STORY ID TESTING     | Description            | Outcome  |   
+| -------------| -------------    | --------       | 
+| ID 101       | All of the products are shown in a page. There is no any missing products and products data showing on the page.   | Pass 
+| ID 102       | Each products has a valid link which direct to product detail page. No broken link shows. The product price, rating, image and volumes availability are showing on the page.  | Pass 
+| ID 103       | The toast notification is shown for confirming success add on whenever a product is added to the cart.| Pass
+| ID 104       | The cart total is shown at the cart icon. The price total is updated whenever there is an update in the cart. | Pass 
+| ID 201       | New users can register with the website easily without any error. They will be redirected to the home page and also be prompted with the registration successful message.  New users can only register with the email address that has not existed in the database, a valid username and password orelse, a error message will display to the users to inform the users that the username is already exist in the databse. User can access to their own profile after registration. | Pass
+| ID 202       | Existing users can log in and log out without error. Users can view their profile by clicking on the *Profile* tab on the top navigation *Account* link. If an invalid email address and/or password are entered while signing in, an error message will show incorrect username and/or password. | Pass
+| ID 203       | Existing users can reset their password in the sign in page, which will redirect them to the password reset page to enter their registered email account. | Pass
+| ID 204       | New users can receive registration email confirmation send to their registered email adderss for verification. The account becomes valid after the users have done the verification. | Pass
+| ID 205       | Existing user can browse their order history and update their default delivery address in the profile page. | Pass
+| ID 301       | Users can enter keyword on the search bar to look for products. If keyword matches, the relevant products will display to the user. If there is no result found, a paragragh error will show up as *No products found with that search query!*. Searching on blank result will redirect to product page prompted with no input in the query error message. | Pass
+| ID 302, ID 303, ID 304       | Users can sort product by price from low to high, from top to bottom page respectively. Users can sort product rating from high to low, from top to bottom page respectively. Users can sort product category where the same category products will align with each other. | Pass  
+| ID 401, ID 403        | Users can select quantity and volume of the products without error. If the product quantity input is a negative value, an error message will be prompted.
+| ID 402       | The cart is showing what the users have added by their own. Users can edit and delete product quantity | Pass
+| ID 404, ID 405       | Users can fill up their payment details easily. If an invalid card details are entered, an error message will be prompted until the users have input the valid card details. The tested credit card numbers, MM/YY, CVV and Zip were 4242 4242 4242 4242, 04 / 24, 242, and 42424 respectively. | Pass
+| ID 406        | Users are directed to checkout success page after payment. The page shows the order confirmation | Pass
+| ID 407        | Users can receive an email confirmation after purchasing. | Pass
+| ID 501        | Users can view the list of top rated products in the blog page. | Pass
+| ID 502, ID 503        | Users can review and write comments on the particular product. The posted date and author name are shown in the comment section.  
+| ID 601        | Admin can access to the product management link in the account navigation link at the top page. It redirects to the product editing page to add products and selecting required data attribute.
+| ID 602, ID 603| Admin can edit or delete the product in the database. | Pass
+
+### **Code Validation**
+Broken Link Checker 
+![Broken Link Checker](/design/screenshot/broken_link_checker.png)
+
+Css Validation
+![Css Validation](/design/screenshot/css_checker.png)
+
+### **Error on Pylint**
+The pylint error shows in the terminal by typing `python3 manage.py flake8` shows the migrations files lines are too long. Since they are autogenerated files and pylint may intentionally ignore the style rules, hence those files don't need to be perfectly readable.
+
 
 # Deployment
 ## To run the application on your local PC / Local Deployment
