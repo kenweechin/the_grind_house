@@ -7,7 +7,6 @@
         </div>
     </div>
 {% endblock %}
-
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -39,9 +38,10 @@
                     </div>
                 {% endfor %}
                 <hr>
+            </div>
         <div class="row">
             <div class="col 12 text-center mt-5">        
-                <h2 class="subtitle">Add comment</h1>
+                <h2 class="subtitle">Add comment</h2>
                 <form method="POST" action="">
                     {% csrf_token %}
                     {{ form|crispy }}
