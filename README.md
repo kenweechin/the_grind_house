@@ -322,7 +322,64 @@ Essential Stripe payment variables:
 
 **Remote Deployment**
 The site is deployed to Heroku app at: https://kenweechin-the-grind-house.herokuapp.com/
- 
+
+Create the essential deployment files in the repository:
+* requirements.txt
+    * From the root directory, type this command into the terminal `pip3 freeze > requirements.txt`.
+* Procfile
+    * Inform Heroku the command to use to start the app.
+    * From the root directory, type this command into the terminal `echo web: gunicorn TWCoulsdon.wsgi:application`.
+
+**Heroku App Creation**
+
+From the Heroku dashboard, select:
+    *New* --> *Create new app*
+
+![Create Heroku App](/design/screenshot/heroku_app.png)
+
+Add new app details to the form displayed:
+* App Name
+* Choose a region
+* Create App
+
+![Create Heroku App2](/design/screenshot/heroku_app2.png)
+
+**Setting Environment Variables**
+From the Heroku dashboard:
+* Select the app from the list show
+* Click on Settings from the menu
+    * Select *Reveal Config Vars*
+    * Add environment variables in key value pairs
+    * Click on *Add* to add each key/value pair
+
+**Creating the database**
+* Select the app from the list
+* Select *Resources* from the menu
+    * Select the search bar in the addons section
+    * Type: *Postgres* and select Heroky Postgres
+        * Select *submit order form*
+
+Database _URL will now be included in the Heroku environment variables. This can be used to connect to the remote database.
+
+## Credits
+
+### **Media**
+* The landing image and the blogger image in the home page are taken from [Unsplash](https://unsplash.com/).
+* Favicon: [The best Favicon Generator](https://icons8.com/icons/set/favicon).
+* Product Image and description: [Amazon](https://www.amazon.co.uk/), [Bodum](https://www.bodum.com/ie/en/1908-913-java), [Crema](https://www.cremashop.eu/en/products/bodum/pour-over-coffee-maker), [Handpresso](https://www.handpresso.com/en/handpresso-auto-capsule-8.html).
+
+### **Website Design Feature**
+* The pulse animation effect on the button was derived and edited from *Fontendchannels Instagram*.
+* Blog button in the home page was derived and edited from [AdamGiebl](https://uiverse.io/detail/adamgiebl/ugly-robin-41).
+
+### **Content**
+* The concept of the blog app was derived and edited from *CodeWithStein* from [Youtube](https://www.youtube.com/).
+
+## Acknowledgement 
+* I would like to thank the members of the Student Support and Tutor from Code Institute who had offered advice and help on my coding related issue. Furthermore, I would like to thank my mentor - Mr Spencer for steering my projects in the right direction. 
+
+
+
 
 
 
