@@ -19,8 +19,7 @@
                 <hr>
             </div>
         </div>
-
-
+    </div>
     <div class="container">    
         <div class="row">
             <div class="card-frontpage col-md-12 mb-4 mt-3 left top text-center">
@@ -28,10 +27,9 @@
                 <h3 class="post-title">{{ post.title }}</h3> 
                 <p class="font-italic">{{ post.content }}</p>
                 <p class="post-date"><small>Posted at {{ post.created_on }}</small></p>
-                <a href = "{% url 'post_list' post.slug%}" class="post-link">Read More!</a>
+                <a href = "{% url 'post_list' post.slug %}" class="post-link">Read More!</a>
                 {% endfor %}
             </div>
         </div>
     </div>
-    
 {% endblock %}

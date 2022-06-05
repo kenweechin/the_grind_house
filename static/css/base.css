@@ -470,10 +470,6 @@ div.form-control.quantity {
         margin-top: 5rem;
         font-size: 1.5rem;
     }
-
-    body {
-        height: calc(100vh-180px);
-    }
     
     .btn.btn-outline-blue.rounded-0,
     .btn.btn-blue.rounded-0,
@@ -494,7 +490,7 @@ div.form-control.quantity {
     }
 
     .increment-qty, .decrement-qty {
-        padding: .2rem, .5rem !important;
+        padding: .2rem .5rem !important;
     }
 }
 
@@ -506,10 +502,6 @@ div.form-control.quantity {
     .slogan {
         margin-top: 4rem;
         font-size: 1.5rem;
-    }
-
-    body {
-        height: calc(100vh-180px);
     }
 } 
 
